@@ -40,7 +40,7 @@ try {
         let str = `
 ┌─⊷ *LEVEL UP*
 ✘ previous level : *${before}*
-✘ Nivel actual : *${user.level}*
+✘ Current level : *${user.level}*
 ✘ Rank : *${user.role}*
 └──────────────
 
