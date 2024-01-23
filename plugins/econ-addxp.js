@@ -4,22 +4,22 @@ let handler = async (m, { conn, text }) => {
   let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
-  if (!who) throw '✳️ Taguea al usuario'
+  if (!who) throw '✳️ Tag the user'
   let txt = text.replace('@' + who.split`@`[0], '').trim()
-  if (!txt) throw '✳️ Ingrese la cantidad de *XP* que quiere añadir'
-  if (isNaN(txt)) throw ' 🔢 sólo números'
+  if (!txt) throw '✳️ Enter the amount of *XP* you want to add'
+  if (isNaN(txt)) throw ' 🔢 Only numbers'
   let xp = parseInt(txt)
   let exp = xp
   
-  if (exp < 1) throw '✳️ Mínimo es  *1*'
+  if (exp < 1) throw '✳️ Minimum is  *1*'
   let users = global.db.data.users
   users[who].exp += xp
 
-  await m.reply(`≡ *XP AÑADIDO*
+  await m.reply(`≡ *XP ADDED*
 ┌──────────────
-▢  *Total:* ${xp}
+✘  *Total:* ${xp}
 └──────────────`)
- conn.fakeReply(m.chat, `▢ Recibiste \n\n *+${xp} XP*`, who, m.text)
+ conn.fakeReply(m.chat, `✘ You received \n\n *+${xp} XP*`, who, m.text)
 }
 
 handler.help = ['addxp <@user>']
@@ -28,4 +28,3 @@ handler.command = ['addxp']
 handler.rowner = true
 
 export default handler
-
