@@ -2,22 +2,21 @@
 import fg from 'api-dylux'
 let handler = async (m, { conn, text, args }) => {
 	
-  if (!text) throw `✳️ Ingrese el Username de un usuario de TikTok`
+  if (!text) throw `✳️ Enter the TikTok username`
 try {
   let res = await fg.ttStalk(args[0])
   let txt = `
 ┌──「 *TIKTOK STALK* 
-▢ *🔖Nombre:* ${res.name}
-▢ *🔖Username:* ${res.username}
-▢ *👥Seguidores:* ${res.followers}
-▢ *🫂Siguiendo:* ${res.following}
-▢ *📌Desc:* ${res.desc}
-
-▢ *🔗 Link* : https://tiktok.com/${res.username}
+✘ *🔖Name:* ${res.name}
+✘ *🔖Username:* ${res.username}
+✘ *👥Followers:* ${res.followers}
+✘ *🫂Following:* ${res.following}
+✘ *📌Desc:* ${res.desc}
+✘ *🔗 Link* : https://tiktok.com/${res.username}
 └────────────`
   await conn.sendFile(m.chat, res.profile, 'tt.png', txt, m)
 } catch {
-    m.reply(`✳️ Revisa que el nombre de usuario sea de TikTok`)
+    m.reply(`✳️ Make sure the username is from TikTok`)
 }
 }
 handler.help = ['tiktokstalk']
