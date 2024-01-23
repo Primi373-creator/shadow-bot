@@ -2,7 +2,7 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, text }) => {
 	
-if (!text) throw `✳️ Ingresa el texto`
+if (!text) throw `✳️ Enter the text`
 m.react('💬')
 
 	try {
@@ -10,7 +10,7 @@ m.react('💬')
         let res = await gpt.json()
         await m.reply(res.result)
 	} catch {
-		m.reply(`❎ Error: intenta más tarde`)
+		m.reply(`❎ Error: Please try again later`)
 	}
 
 }
