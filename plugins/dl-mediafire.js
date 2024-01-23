@@ -2,12 +2,12 @@
 import fetch from 'node-fetch'
 import { mediafiredl } from '@bochilteam/scraper'
 import fg from 'api-dylux'
-let free = 150 // limite de descarga
-let prem = 300 //si su servidor tienes menos de 2GB baja el límite
+let free = 150; // Download limit for free users
+let prem = 300; // Download limit for premium users (if your server has less than 2GB, lower the limit)
 let handler = async (m, { conn, args, text, usedPrefix, command, isOwner, isPrems }) => {
 	
-   if (!args[0]) throw `✳️ Ingrese el link de mediafire junto al comando`
-    if (!args[0].match(/mediafire/gi)) throw `❎ Link incorrecto`
+   if (!args[0]) throw `✳️ Enter the MediaFire link along with the command`
+    if (!args[0].match(/mediafire/gi)) throw `❎ incorrect Link!`
     m.react(rwait)
     
     let limit = isPrems || isOwner ? prem : free
@@ -18,13 +18,13 @@ let handler = async (m, { conn, args, text, usedPrefix, command, isOwner, isPrem
     let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
     let isLimit = limit * 1024 < filesize
     let caption = `
-   ≡ *MEDIAFIRE*
-▢ *Nombre:* ${filename}
-▢ *Tamaño:* ${filesizeH}
-▢ *Extension:* ${ext}
-▢ *Subido:* ${aploud}
-${isLimit ? `\n▢ El archivo supera el límite de descarga *+${free} MB*\nPásate a premium para poder descargar archivos más de *${prem} MB*` : ''} 
-`.trim()
+📂 *MEDIAFIRE INFO*
+📄 *Name:* ${filename}
+📏 *Size:* ${filesizeH}
+📝 *Extension:* ${ext}
+📅 *Uploaded:* ${aploud}
+${isLimit ? `\n⚠️ The file exceeds the download limit of *+${free} MB*\nUpgrade to premium to download files larger than *${prem} MB*` : ''} 
+`.trim();
     await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)  
     if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
     m.react(done)
@@ -36,13 +36,13 @@ ${isLimit ? `\n▢ El archivo supera el límite de descarga *+${free} MB*\nPása
      let { url, url2, filename, ext, upload_date, filesize, filesizeB } = res
     let isLimit = limit * 1024 < filesizeB
     let caption = `
-   ≡ *MEDIAFIRE*
-▢ *Nombre:* ${filename}
-▢ *Tamaño:* ${filesize}
-▢ *Extension:* ${ext}
-▢ *Subido:* ${upload_date}
-${isLimit ? `\n▢ El archivo supera el límite de descarga *+${free} MB*\nPásate a premium para poder descargar archivos más de *${prem} MB*` : ''} 
-`.trim()
+📂 *MEDIAFIRE INFO*
+📄 *Name:* ${filename}
+📏 *Size:* ${filesizeH}
+📝 *Extension:* ${ext}
+📅 *Uploaded:* ${aploud}
+${isLimit ? `\n⚠️ The file exceeds the download limit of *+${free} MB*\nUpgrade to premium to download files larger than *${prem} MB*` : ''} 
+`.trim();
 
 await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
 if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
