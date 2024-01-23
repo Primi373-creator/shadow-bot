@@ -36,7 +36,7 @@ const defaultMenu = {
 
 %readmore
 Ⓟ = Premium
-ⓓ = Diamantes
+ⓓ = Diamonds
 -----  -----  -----  -----  -----
   ≡ *MENU LIST*
 `.trimStart(),
