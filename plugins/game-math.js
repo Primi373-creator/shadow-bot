@@ -2,36 +2,36 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     conn.math = conn.math ? conn.math : {}
     
     if (args.length < 1) throw `
-  🧮 Dificultades disponibles : 
+ 🧮 Available difficulties:  
   
 ${Object.keys(modes).join(' | ')} 
 
-_📌Ejemplo : ${usedPrefix+command} normal_
+_📌Example: ${usedPrefix+command} normal_
 `.trim()
   let mode = args[0].toLowerCase()
   if (!(mode in modes)) throw `
-  🧮 Dificultades disponibles : 
+  🧮 Available difficulties: 
   
  ${Object.keys(modes).join(' | ')}
 
-_📌Ejemplo : ${usedPrefix+command} normal_
+_📌Example: ${usedPrefix+command} normal_
 `.trim()
     
   let id = m.chat
-    if (id in conn.math) return conn.reply(m.chat, '⚠️ Todavía hay preguntas sin respuesta en este chat', conn.math[id][0])
+    if (id in conn.math) return conn.reply(m.chat, '⚠️ There are still unanswered questions in this chat', conn.math[id][0])
     let math = genMath(mode)
     conn.math[id] = [
-        await conn.reply(m.chat, `▢ CUANTO ES *${math.str}*=\n\n_Tiempo:_ ${(math.time / 1000).toFixed(2)} segundos\n\n🎁 Recompensa : ${math.bonus} XP`, m),
+        await conn.reply(m.chat, `✘ HOW MUCH IS *${math.str}*=\n\n_Time:_ ${(math.time / 1000).toFixed(2)} seconds\n\n🎁 Reward: ${math.bonus} XP`, m),
         math, 4,
         setTimeout(() => {
-            if (conn.math[id]) conn.reply(m.chat, `⏳ Se acabó el tiempo!\nLa respuesta es : *${math.result}*`, conn.math[id][0])
+            if (conn.math[id]) conn.reply(m.chat, `⏳ Time's up!\nThe answer is: *${math.result}*`, conn.math[id][0])
       delete conn.math[id]
         }, math.time)
     ]
 }
-handler.help = ['Mates <modo>']
+handler.help = ['Math <mode>']
 handler.tags = ['game']
-handler.command = ['mates', 'mate', 'matemáticas', 'math'] 
+handler.command = ['solve', 'math'] 
 
 
 let modes = {
