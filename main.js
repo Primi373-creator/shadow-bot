@@ -93,7 +93,7 @@ const connectionOptions = {
 	    version,
         printQRInTerminal: true,
         auth: state,
-        browser: ['dylux-bot', 'Safari', '3.1.0'], 
+        browser: ['shadow', 'Safari', '3.1.0'], 
 	      patchMessageBeforeSending: (message) => {
                 const requiresPatch = !!(
                     message.buttonsMessage 
@@ -193,14 +193,14 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = 'Hola, @user\nBienvenido a @group'
-  conn.bye = 'adiós @user'
-  conn.spromote = '@user promovió a admin'
-  conn.sdemote = '@user degradado'
-  conn.sDesc = 'La descripción ha sido cambiada a \n@desc'
-  conn.sSubject = 'El nombre del grupo ha sido cambiado a \n@group'
-  conn.sIcon = 'El icono del grupo ha sido cambiado'
-  conn.sRevoke = 'El enlace del grupo ha sido cambiado a \n@revoke'
+  conn.welcome = 'Hello, @user\nWelcome to @group';
+  conn.bye = 'Goodbye @user';
+  conn.spromote = '@user promoted to admin';
+  conn.sdemote = '@user demoted';
+  conn.sDesc = 'The description has been changed to \n@desc';
+  conn.sSubject = 'The group name has been changed to \n@group';
+  conn.sIcon = 'The group icon has been changed';
+  conn.sRevoke = 'The group link has been changed to \n@revoke';
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
@@ -239,12 +239,12 @@ global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
     let dir = global.__filename(join(pluginFolder, filename), true)
     if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(`🌟 Plugin Actualizado - '${filename}'`)
+      if (existsSync(dir)) conn.logger.info(`🌟 Plugin updated - '${filename}'`)
       else {
-        conn.logger.warn(`🗑️ Plugin Eliminado - '${filename}'`)
+        conn.logger.warn(`🗑️ Plugin deleted - '${filename}'`)
         return delete global.plugins[filename]
       }
-    } else conn.logger.info(`✨ Nuevo plugin - '${filename}'`)
+    } else conn.logger.info(`✨ Nww plugin - '${filename}'`)
     let err = syntaxerror(readFileSync(dir), filename, {
       sourceType: 'module',
       allowAwaitOutsideFunction: true
