@@ -42,43 +42,34 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   let speed = neww - old
   
 let infobt = `
-≡ *INFO BOT*
-  
-*ESTADO*
-▢ *${groupsIn.length}* Chats de grupo
-▢ *${groupsIn.length}* Gropos unidos
-▢ *${groupsIn.length - groupsIn.length}* Grupos abandonados
-▢ *${chats.length - groupsIn.length}* Chats privados
-▢ *${chats.length}* Total Chats
+≡ *BOT INFO*
+
+*STATUS*
+✘ *${groupsIn.length}* Group Chats
+✘ *${groupsIn.length}* Joined Groups
+✘ *${groupsIn.length - groupsIn.length}* Abandoned Groups
+✘ *${chats.length - groupsIn.length}* Private Chats
+✘ *${chats.length}* Total Chats
 
 *≡ OWNER*
-  *FG98*
-▢ Instagram :
-  • https://instagram.com/fg98_ff
-▢ WhatsApp :
-  • (escribe solo si es necesario) 
-▢ GitHub :
-  • https://github.com/FG98F
-▢ Telegram : 
-  • t.me/fgsupp_bot (FG) 
-  • t.me/fg98ff (canal)
-  • t.me/fgawgp (grupo)
-▢ YouTube : 
-  • https://youtube.com/fg98f
+  *Cipher0071*
+✘ Instagram :
+  • Not on instagram!!
+✘ WhatsApp :
+  • @#$9150690169 
+✘ GitHub :
+  • https://github.com/Cipher0071
+✘ Telegram : 
+  • t.me/Cipher0071
+✘ YouTube : 
+  • Not on youtube!!
   
- *≡ HELPERS*
-  *CRISS*
-▢ Instagram : https://www.instagram.com/sayurizuniga3
-▢ WhatsApp : wa.me/
-  *ANDREA*
-▢ Instagram : https://
-▢ WhatsApp : wa.me/573125484672
 
  *≡ S E R V E R*
-*🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
-*🔵 FreeRAM:* ${format(freemem())}
+*💻 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+*💻 FreeRAM:* ${format(freemem())}
 
-*≡  NodeJS Uso de memoria*
+*≡ NodeJS Memory Usage*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `
 m.reply(infobt)
