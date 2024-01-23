@@ -31,7 +31,7 @@ const defaultMenu = {
  
 👋🏻 _Konichiwa_ *%name*
 🧿 Level : *%level* 
-👥 Usuarios : %totalreg
+👥 users : %totalreg
 📈 Uptime : %muptime
 
 %readmore
@@ -143,15 +143,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-    let pp = './src/shadow.mp4'
+   conn.(m.chat, { video: { url: './src/shadow.mp4' }, caption: text.trim(),  gifPlayback: true,
+  gifAttribution: 0})
      
-    conn.sendFile(m.chat, pp, 'menu.mp4', text.trim(), m, null, rpl)
-    /*conn.sendButton(m.chat, text.trim(), '▢ DyLux  ┃ ᴮᴼᵀ\n▢ Sígueme en Instagram\nhttps://www.instagram.com/fg98_ff', pp, [
-      ['ꨄ︎ Apoyar', `${_p}donate`],
-      ['⏍ Info', `${_p}botinfo`],
-      ['⌬ Grupos', `${_p}gpdylux`]
-    ],m, rpl)*/
-  
     m.react('📚') 
     
   } catch (e) {
