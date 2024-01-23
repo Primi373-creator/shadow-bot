@@ -7,12 +7,12 @@ if (!args[0]) throw `📌 Ejemplo : \n*${usedPrefix + command}* https://twitter.
           let { SD, HD, desc, thumb, audio } = await fg.twitter(args[0])
           let te = ` 
 ┌─⊷ *TWITTER DL*
-▢ Descripción: ${desc}
+✘ Description: ${desc}
 └───────────`
 conn.sendFile(m.chat, HD, 'twitter.mp4', te, m)
 m.react(done)
 } catch (e) {
-  	m.reply(`✳️ verifica que el link sea de Twitter`)
+  	m.reply(`✳️ Check that the link is from Twitter`)
 	} 
 	
 }
