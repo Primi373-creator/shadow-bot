@@ -1,54 +1,54 @@
-//import db from '../lib/database.js'
+let handler = async (m, { text, usedPrefix, command }) => {
+    let points = 300;
+    let responseMsg = `✳️ Select rock/paper/scissors\n\nExample: *${usedPrefix + command}* paper\n`;
+    
+    if (!text) throw responseMsg;
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-    let poin = 300
-    let reseqv = `✳️ Seleccione piedra/papel/tijera\n\nEjemplo : *${usedPrefix + command}* papel\n`
-    if (!text) throw reseqv
-    var astro = Math.random()
+    let botChoice = Math.random();
 
-    if (astro < 0.34) {
-        astro = 'piedra'
-    } else if (astro > 0.34 && astro < 0.67) {
-        astro = 'tijera'
+    if (botChoice < 0.34) {
+        botChoice = 'rock';
+    } else if (botChoice > 0.34 && botChoice < 0.67) {
+        botChoice = 'scissors';
     } else {
-        astro = 'papel'
+        botChoice = 'paper';
     }
 
-
-    if (text == astro) {
-      global.db.data.users[m.sender].exp += 100
-        m.reply(`▢ *Empate*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos (±)100 XP`)
-    } else if (text == 'piedra') {
-        if (astro == 'tijera') {
-            global.db.data.users[m.sender].exp += 300
-            m.reply(`▢ *Ganaste* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+    if (text == botChoice) {
+        global.db.data.users[m.sender].exp += 100;
+        m.reply(`✘ *Draw*\n\n‣ You: ${text}\n‣ DyLux: ${botChoice}\n\n🎁 Points (±)100 XP`);
+    } else if (text == 'rock') {
+        if (botChoice == 'scissors') {
+            global.db.data.users[m.sender].exp += 300;
+            m.reply(`✘ *You won!* 🎊\n\n‣ You: ${text}\n‣ DyLux: ${botChoice}\n\n🎁 Points *+${points} XP*`);
         } else {
-          global.db.data.users[m.sender].exp -= 300
-            m.reply(`▢ *Perdiste*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n Puntos *-${poin} XP*`)
+            global.db.data.users[m.sender].exp -= 300;
+            m.reply(`✘ *You lost*\n\n‣ You: ${text}\n‣ DyLux: ${botChoice}\n\nPoints *-${points} XP*`);
         }
-    } else if (text == 'tijera') {
-        if (astro == 'papel') {
-            global.db.data.users[m.sender].exp += 300
-            m.reply(`▢ *Ganaste* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+    } else if (text == 'scissors') {
+        if (botChoice == 'paper') {
+            global.db.data.users[m.sender].exp += 300;
+            m.reply(`✘ *You won!* 🎊\n\n‣ You: ${text}\n‣ DyLux: ${botChoice}\n\n🎁 Points *+${points} XP*`);
         } else {
-          global.db.data.users[m.sender].exp -= 300
-            m.reply(`▢ *Perdiste*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\nPuntos *-${poin} XP*`)
+            global.db.data.users[m.sender].exp -= 300;
+            m.reply(`✘ *You lost*\n\n‣ You: ${text}\n‣ DyLux: ${botChoice}\n\nPoints *-${points} XP*`);
         }
-    } else if (text == 'papel') {
-        if (astro == 'piedra') {
-            global.db.data.users[m.sender].exp += 300
-            m.reply(`▢ *Ganaste* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+    } else if (text == 'paper') {
+        if (botChoice == 'rock') {
+            global.db.data.users[m.sender].exp += 300;
+            m.reply(`✘ *You won!* 🎊\n\n‣ You: ${text}\n‣ DyLux: ${botChoice}\n\n🎁 Points *+${points} XP*`);
         } else {
-          global.db.data.users[m.sender].exp -= 300
-            m.reply(`▢ *Perdiste*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\nPuntos *-${poin} XP*`)
+            global.db.data.users[m.sender].exp -= 300;
+            m.reply(`✘ *You lost*\n\n‣ You: ${text}\n‣ DyLux: ${botChoice}\n\nPoints *-${points} XP*`);
         }
     } else {
-        throw reseqv
+        throw responseMsg;
     }
-}
-handler.help = ['ppt <piedra/papel/tijera>']
-handler.tags = ['game']
-handler.command = ['ppt'] 
-handler.register = false
+};
 
-export default handler
+handler.help = ['ppt <rock/paper/scissors>'];
+handler.tags = ['game'];
+handler.command = ['ppt'];
+handler.register = false;
+
+export default handler;
