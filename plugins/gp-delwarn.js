@@ -10,8 +10,8 @@ let handler = async (m, { conn, args, groupMetadata}) => {
          global.db.data.users[who].warn -= 1
          m.reply(`⚠️ *DELWARN*
          
-▢ Warns: *-1*
-▢ Warns total: *${warn - 1}*`)
+✘ Warns: *-1*
+✘ Warns total: *${warn - 1}*`)
          m.reply(`✳️ An admin lowered their warning, now you have *${warn - 1}*`, who)
          } else if (warn == 0) {
             m.reply('✳️ The user has no warning')
