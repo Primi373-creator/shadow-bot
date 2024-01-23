@@ -7,7 +7,7 @@ let m2 = `
 ≡ _Use these commands without the prefix_
 
  ✘ If you have more audios,
-send them to me on t.me/fgsupp_bot with the *audio + command* to which it will respond.
+send them to me on 2349150690169 with the *audio + command* to which it will respond.
 
 ╭━━〘 *AUDIOS* 〙──⊷
 ┃ ✘ Bot
