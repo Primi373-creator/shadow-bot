@@ -2,15 +2,15 @@
 let handler = async (m, { conn }) => {
 	
 	await conn.fetchBlocklist().then(async data => {
-		let txt = `*≡ Lista de bloqueados*\n\n*Total :* ${data.length}\n\n┌─⊷\n`
+		let txt = `*≡ Blocked List*\n\n*Total:* ${data.length}\n\n┌─⊷\n`
 		for (let i of data) {
-			txt += `▢ @${i.split("@")[0]}\n`
+			txt += `✘ @${i.split("@")[0]}\n`
 		}
 		txt += "└───────────"
 		return conn.reply(m.chat, txt, m, { mentions: await conn.parseMention(txt) })
 	}).catch(err => {
 		console.log(err);
-		throw 'No hay números bloqueados'
+		throw 'No blocked numbers'
 	})
 }
 
