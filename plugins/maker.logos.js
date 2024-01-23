@@ -27,7 +27,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
      break 
      case 'wolf': 
     if (!text) throw tee
-    let wo = global.API('fgmods', '/api/textpro/logowolf', { text: 'FG98', text2: text}, 'apikey')
+    let wo = global.API('fgmods', '/api/textpro/logowolf', { text: 'Cipher', text2: text}, 'apikey')
      conn.sendFile(m.chat, wo, 'logo.png', `✅ Result`, m)
      m.react(done)
      break 
