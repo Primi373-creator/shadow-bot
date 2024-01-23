@@ -1,56 +1,70 @@
 //import db from '../lib/database.js'
-let reg = 40
+let reg = 40;
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let fa = `
-Cuanto quieres apostar? 
+How much do you want to bet?
 
-📌 Ejemplo :
-*${usedPrefix + command}* 100`.trim()
-    if (!args[0]) throw fa
-    if (isNaN(args[0])) throw fa
-    let apuesta = parseInt(args[0])
-    let users = global.db.data.users[m.sender]
-    let time = users.lastslot + 10000
-    if (new Date - users.lastslot < 10000) throw `⏳ Espere *${msToTime(time - new Date())}* para usar de nuevo`
-    if (apuesta < 100) throw '✳️ Mínimo de la apuesta es *100 XP*'
-    if (users.exp < apuesta) {
-        throw `✳️ No tienes suficiente *XP*`
+📌 Example:
+*${usedPrefix + command}* 100`.trim();
+    
+    if (!args[0]) throw fa;
+    if (isNaN(args[0])) throw fa;
+    
+    let betAmount = parseInt(args[0]);
+    let user = global.db.data.users[m.sender];
+    let time = user.lastslot + 10000;
+
+    if (new Date - user.lastslot < 10000) {
+        throw `⏳ Wait *${msToTime(time - new Date())}* to use it again`;
+    }
+
+    if (betAmount < 100) {
+        throw '✳️ Minimum bet is *100 XP*';
+    }
+
+    if (user.exp < betAmount) {
+        throw `✳️ You don't have enough *XP*`;
     }
 
     let emojis = ["🕊️", "🦀", "🦎"];
     let a = Math.floor(Math.random() * emojis.length);
     let b = Math.floor(Math.random() * emojis.length);
     let c = Math.floor(Math.random() * emojis.length);
-    let x = [],
-        y = [],
-        z = [];
+    let x = [], y = [], z = [];
+
     for (let i = 0; i < 3; i++) {
         x[i] = emojis[a];
         a++;
         if (a == emojis.length) a = 0;
     }
+
     for (let i = 0; i < 3; i++) {
         y[i] = emojis[b];
         b++;
         if (b == emojis.length) b = 0;
     }
+
     for (let i = 0; i < 3; i++) {
         z[i] = emojis[c];
         c++;
         if (c == emojis.length) c = 0;
     }
+
     let end;
+
     if (a == b && b == c) {
-        end = `🎁 GANASTE\n *+${apuesta + apuesta} XP*`
-        users.exp += apuesta + apuesta
+        end = `🎁 YOU WON\n *+${betAmount + betAmount} XP*`;
+        user.exp += betAmount + betAmount;
     } else if (a == b || a == c || b == c) {
-        end = `🔮 Casi lo logras sigue intentando :) \nTen *+${reg} XP*`
-        users.exp += reg
+        end = `🔮 Almost there, keep trying :)\nEarn *+${reg} XP*`;
+        user.exp += reg;
     } else {
-        end = `😔 Perdiste  *-${apuesta} XP*`
-        users.exp -= apuesta
+        end = `😔 You lost *-${betAmount} XP*`;
+        user.exp -= betAmount;
     }
-    users.lastslot = new Date * 1
+
+    user.lastslot = new Date * 1;
+
     return await m.reply(
         `
        🎰 ┃ *SLOTS* 
@@ -61,23 +75,24 @@ Cuanto quieres apostar?
      ───────────
         🎰┃🎰┃ 🎰
         
-${end}`) 
-}
-handler.help = ['slot <apuesta>']
-handler.tags = ['game']
-handler.command = ['slot']
+${end}`);
+};
 
-export default handler
+handler.help = ['slot <betAmount>'];
+handler.tags = ['game'];
+handler.command = ['slot'];
+
+export default handler;
 
 function msToTime(duration) {
     var milliseconds = parseInt((duration % 1000) / 100),
         seconds = Math.floor((duration / 1000) % 60),
         minutes = Math.floor((duration / (1000 * 60)) % 60),
-        hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+        hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
-    hours = (hours < 10) ? "0" + hours : hours
-    minutes = (minutes < 10) ? "0" + minutes : minutes
-    seconds = (seconds < 10) ? "0" + seconds : seconds
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    return seconds + " Segundo(s)"
+    return seconds + " Second(s)";
 }
