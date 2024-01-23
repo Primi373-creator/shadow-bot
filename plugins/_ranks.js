@@ -5,16 +5,24 @@ global.rpg = {
     level = parseInt(level)
     if (isNaN(level)) return { name: '', level: '' }
     
-    const role = [
-      { name: "Novice", level: 0 }, { name: "Apprentice", level: 4 }, 
-      { name: "Adept", level: 8 }, { name: "Magus", level: 12 }, 
-      { name: "Master", level: 16 }, { name: "Guardian", level: 20 }, 
-      { name: "Champion", level: 24 }, { name: "Hero", level: 28 }, 
-      { name: "Legend", level: 32 }, { name: "Myth", level: 36 },
-      { name: "Wizard", level: 48 }, { name: "Archmage", level: 52 }, 
-      { name: "Sage", level: 56 }, { name: "Divine", level: 60 }, 
-      { name: "All-Father", level: 100 }
-    ];
+    const roles = [
+            { name: "Adventurer", level: 0 },
+            { name: "Rookie Mage", level: 4 },
+            { name: "Spellcaster", level: 8 },
+            { name: "Sorcerer", level: 12 },
+            { name: "Arcane Master", level: 16 },
+            { name: "Guardian Knight", level: 20 },
+            { name: "Champion of Legends", level: 24 },
+            { name: "Heroic Warrior", level: 28 },
+            { name: "Legendary Hero", level: 32 },
+            { name: "Mythical Being", level: 36 },
+            { name: "Wizard Extraordinaire", level: 48 },
+            { name: "Archmage Supreme", level: 52 },
+            { name: "Wise Sage", level: 56 },
+            { name: "Divine Protector", level: 60 },
+            { name: "All-Father", level: 100 }
+        ];
+
 
     return role.reverse().find(role => level >= role.level)
   }
