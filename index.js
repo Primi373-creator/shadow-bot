@@ -1,4 +1,4 @@
-console.log('✅ Iniciando...')
+console.log('✅ Initilizing')
 
 import { join, dirname } from 'path'
 import { createRequire } from 'module';
@@ -16,12 +16,12 @@ const { name, author } = require(join(__dirname, './package.json')) // https://w
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('Dylux FG98', {
+say('Cipher Shadow', {
   font: 'pallet',
   align: 'center',
   gradient: ['red', 'magenta']
 })
-say(`dylux-bot By FG98 Ig: @fg98_ff`, {
+say(`Shadow bot by cipher`, {
   font: 'console',
   align: 'center',
   gradient: ['cyan', 'magenta']
@@ -62,7 +62,7 @@ function start(file) {
   //---
  p.on('exit', (_, code) => {
     isRunning = false
-    console.error('❎ Ocurrió un error inesperado:', code)
+    console.error('❎ An unexpected error occurred:', code)
     if (code === 0) return
     watchFile(args[0], () => {
       unwatchFile(args[0])
