@@ -8,13 +8,13 @@ let handler = async (m, { conn }) => {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
         let txt = `
 ┌───⊷ *NIVEL*
-▢ Nombre : *${name}*
-▢ Nivel : *${user.level}*
-▢ XP : *${user.exp - min}/${xp}*
-▢ Rango : *${user.role}*
+✘ Name : *${name}*
+✘ Level : *${user.level}*
+✘ XP : *${user.exp - min}/${xp}*
+✘ Rank : *${user.role}*
 └──────────────
 
-Te falta *${max - user.exp}* de *XP* para subir de nivel
+You need *${max - user.exp}* more XP to level up
 `.trim()
 try {
   let imgg = API('fgmods', '/api/maker/rank', {
@@ -39,12 +39,12 @@ try {
 
         let str = `
 ┌─⊷ *LEVEL UP*
-▢ Nivel anterior : *${before}*
-▢ Nivel actual : *${user.level}*
-▢ Rango : *${user.role}*
+✘ previous level : *${before}*
+✘ Nivel actual : *${user.level}*
+✘ Rank : *${user.role}*
 └──────────────
 
-*_Cuanto más interactúes con los bots, mayor será tu nivel_*
+*_The more you interact with the bots, the higher your level_*
 `.trim()
         try {
             let img = API('fgmods', '/api/maker/levelup', { 
