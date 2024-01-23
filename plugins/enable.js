@@ -4,14 +4,14 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	
 const sections = [
    {
-	title: `≡ Lista de Opciones`,
+	title: `≡ Options List`,
 	rows: [
 	{title: "🔮 | Welcome", rowId: `${usedPrefix + command} welcome`},
 	{title: "🌎 | Public", rowId: `${usedPrefix + command} public`},
 	{title: "🔞 | Nsfw", rowId: `${usedPrefix + command} nsfw`},
 	{title: "🧬 | OnlyLatinos", rowId: `${usedPrefix + command} onlylatinos`},
 	{title: "🔗 | Antilink", rowId: `${usedPrefix + command} antilink`},
-    {title: "🚫 | Antidelete", rowId: `${usedPrefix + command} antidelete`},
+        {title: "🚫 | Antidelete", rowId: `${usedPrefix + command} antidelete`},
 	{title: "⏏️ | Autolevelup", rowId: `${usedPrefix + command} autolevelup`},
 	{title: "🗣️ | ChatBot", rowId: `${usedPrefix + command} chatbot`},
 	{title: "🔎 | Detect", rowId: `${usedPrefix + command} detect`},
@@ -24,10 +24,10 @@ const sections = [
 ]
 
 const listMessage = {
-  text: '\nAquí tiene una lista de lo que puede activar y desactivar',
+  text: '\nHere is a list of options that can be enabled or disabled',
   footer: fgig,
-  title: `≡ Lista de Opciones`,
-  buttonText: "Click Aquí",
+  title: `≡ Options List`,
+  buttonText: "Click Here",
   sections
 }
 
@@ -180,26 +180,26 @@ const listMessage = {
       
     default:
       if (!/[01]/.test(command)) return m.reply(`
-≡ Lista de Opciones
+≡ Options List
 
 ┌─⊷ *ADMIN*
-▢ welcome
-▢ antilink
-▢ detect 
-▢ document
-▢ nsfw
-▢ onlylatinos
+✘ welcome
+✘ antilink
+✘ detect 
+✘ document
+✘ nsfw
+✘ onlylatinos
 └───────────── 
 ┌─⊷ *USERS*
-▢ autolevelup
-▢ chatbot 
+✘ autolevelup
+✘ chatbot 
 └─────────────
 ┌─⊷ *OWNER*
-▢ public
-▢ solopv
-▢ sologp
+✘ public
+✘ solopv
+✘ sologp
 └─────────────
-*📌 Ejemplo :*
+*📌 Example :*
 *${usedPrefix}on* welcome
 *${usedPrefix}off* welcome
 `)
@@ -207,7 +207,7 @@ const listMessage = {
 }
 
 m.reply(`
-✅ *${type}* Se *${isEnable ? 'Activó' : 'Desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}
+✅ *${type}* *${isEnable ? 'Activated' : 'Deactivated'}* ${isAll ? 'for this bot' : isUser ? '' : 'for this chat'}
 `.trim()) 
 
 }
