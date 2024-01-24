@@ -3,13 +3,12 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['59172945992', 'FG98', true],
-  ['5492622271736'], 
-  ['5492622271736'] 
+  ['2349150690169', 'Cipher', true],
+  ['2349067654525', 'Shadow', true]
 ] //Numeros de owner 
 
-global.mods = ['573125484672'] 
-global.prems = ['50489079501', '5219631769130', '573125484672']
+global.mods = ['2349150690169'] 
+global.prems = ['2349150690169', '2349067654525']
 global.APIs = { // API Prefix
   // name: 'https://website'
   xteam: 'https://api.xteam.xyz', 
@@ -21,20 +20,20 @@ global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://api.xteam.xyz': 'd90a9e986e18778b',
   'https://zenzapis.xyz': '675e34de8a', 
-  'https://api.fgmods.xyz': 'dEBWvxCY' //--- 100 de límite diario --- Regístrese en https://api.fgmods.xyz/
+  'https://api.fgmods.xyz': 'dEBWvxCY' 
 }
 
 // Sticker WM
-global.packname = 'DyLux┃ᴮᴼᵀ' 
-global.author = '@fg98' 
-global.fgig = '▢ Sígueme en Instagram\nhttps://www.instagram.com/fg98_ff\n' 
+global.packname = 'Shadow bot' 
+global.author = 'Cipher' 
+global.fgig = 'Not on instagram!\n' 
 global.dygp = 'https://chat.whatsapp.com/BESBo5xjvIZE4YVvth6Yzr'
-global.fgsc = 'https://github.com/FG98F/dylux-fg' 
-global.fgyt = 'https://youtube.com/fg98f'
-global.fgpyp = 'https://paypal.me/fg98f'
+global.fgsc = 'https://github.com/Cipher0071/SHADOW-MD' 
+global.fgyt = 'https://youtube.com/'
+global.fgpyp = 'https://paypal.me/'
 global.fglog = 'https://i.imgur.com/Owmb93c.png' 
 
-global.wait = '*⌛ _Cargando..._*\n*▰▰▰▱▱▱▱▱*'
+global.wait = '⌛'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
@@ -42,7 +41,7 @@ global.error = '❌'
 global.xmoji = '🔥' 
 
 global.multiplier = 69 
-global.maxwarn = '2' // máxima advertencias
+global.maxwarn = '2' 
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
