@@ -22,6 +22,7 @@ const { name, author } = require(join(__dirname, './package.json'));
 const rl = createInterface(process.stdin, process.stdout);
 const app = express();
 const PORT = 3000;
+const { say } = cfonts;
 
 say('Cipher Shadow', {
   font: 'pallet',
