@@ -143,8 +143,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-   conn.(m.chat, { video: { url: './src/shadow.mp4' }, caption: text.trim(),  gifPlayback: true,
-  gifAttribution: 0})
+   let pp = './src/fg_logo.jpg'
+     
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
      
     m.react('📚') 
     
