@@ -1,6 +1,5 @@
 //import db from '../lib/database.js'
-const fs = require('fs');
-import { promises } from 'fs'
+import { readFileSync , existsSync, promises } from 'fs'
 import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
