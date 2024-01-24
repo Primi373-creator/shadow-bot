@@ -86,22 +86,16 @@ function start(file) {
 start('main.js')
 
 app.get('/', (req, res) => {
-  // Sending an HTML page with head and title
-  res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Hello from Cipher</title>
-    </head>
-    <body>
-      <h1>Hello from Cipher</h1>
-      <!-- Additional content can be added here -->
-    </body>
-    </html>
-  `);
-});
+        // Render a simple HTML page with the QR code and text
+        res.send(`
+            <html>
+                <body>
+                    <img src="${_qr}" alt="QR Code">
+                    <p>hello from Cipher.</p>
+                </body>
+            </html>
+        `);
+    });
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`);
