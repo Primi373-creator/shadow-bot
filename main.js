@@ -26,7 +26,9 @@ import {
    } from '@whiskeysockets/baileys'
 const { CONNECTING } = ws
 const { chain } = lodash
-const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
+const express = require('express');
+const app = express();
+const PORT = 3000
 
 protoType()
 serialize()
@@ -132,7 +134,6 @@ if (!opts['test']) {
   }, 60 * 1000)
 }
 
-if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
 /* Clear */
 async function clearTmp() {
@@ -305,6 +306,30 @@ async function _quickTest() {
   if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
 }
 
+
 _quickTest()
   .then(() => conn.logger.info('✅ Quick test completed!'))
   .catch(console.error)
+
+
+app.get('/', (req, res) => {
+  // Sending an HTML page with head and title
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Hello from Cipher</title>
+    </head>
+    <body>
+      <h1>Hello from Cipher</h1>
+      <!-- Additional content can be added here -->
+    </body>
+    </html>
+  `);
+});
+
+app.listen(PORT, () => {
+  console.log(`Express server listening on port ${PORT}`);
+});
