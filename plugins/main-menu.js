@@ -143,22 +143,14 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-   
-  let menuvid = './src/shadow.mp4'; // Replace with the actual path to your video file
-  let infoText = text.trim(); // Use the trimmed text as the caption
+let helpmenu = text.trim();
+let buttonMessage = {
+  image: fs.readFileSync('./src/shadow.mp4'),
+  caption: helpmenu,
+  headerType: 4
+};
+    conn.sendMessage(m.chat, buttonMessage, { quoted: m });
 
-conn.sendMessage(
-  m.chat, // Chat ID or recipient ID
-  {
-    video: {
-      url: menuvid,
-      caption: infoText,
-      gifPlayback: true,
-      gifAttribution: 0
-    }
-  },
-  { quoted: rpl } // Quoted message object (assuming rpl is already defined)
-);
      
     m.react('📚') 
     
