@@ -26,9 +26,6 @@ import {
    } from '@whiskeysockets/baileys'
 const { CONNECTING } = ws
 const { chain } = lodash
-const express = require('express');
-const app = express();
-const PORT = 3000
 
 protoType()
 serialize()
@@ -310,26 +307,3 @@ async function _quickTest() {
 _quickTest()
   .then(() => conn.logger.info('✅ Quick test completed!'))
   .catch(console.error)
-
-
-app.get('/', (req, res) => {
-  // Sending an HTML page with head and title
-  res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Hello from Cipher</title>
-    </head>
-    <body>
-      <h1>Hello from Cipher</h1>
-      <!-- Additional content can be added here -->
-    </body>
-    </html>
-  `);
-});
-
-app.listen(PORT, () => {
-  console.log(`Express server listening on port ${PORT}`);
-});
