@@ -1,5 +1,5 @@
 //import db from '../lib/database.js'
-import { readFileSync , existsSync, promises } from 'fs'
+import { promises } from 'fs'
 import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
@@ -143,17 +143,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-let helpmenu = text.trim(); // Assuming 'text' is defined elsewhere
-let filePath = './src/shadow.mp4'; // Replace with the correct file path
-
-if (fs.existsSync(filePath)) {
-  let buttonMessage = {
-    image: fs.readFileSync(filePath),
-    caption: helpmenu,
-    headerType: 4
-  };
-    conn.sendMessage(m.chat, buttonMessage, { quoted: m });
-
+let pp = './src/fg_logo.jpg'
+     
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
      
     m.react('📚') 
     
