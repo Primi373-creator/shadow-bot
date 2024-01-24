@@ -19,7 +19,7 @@ send them to me on 2349150690169 with the *audio + command* to which it will res
 ╰━━━━━━━━━━━━━━⊷
 `
 
-    let pp = './src/fg_logo.jpg' 
+    let pp = './src/Cid.jpg' 
     conn.sendFile(m.chat, pp, 'menu.jpg', m2, m, null, rpl)
    
 }
