@@ -1,4 +1,6 @@
-console.log('✅ Initilizing')
+
+
+console.log('✅ starting')
 
 import { join, dirname } from 'path'
 import { createRequire } from 'module';
@@ -15,6 +17,9 @@ const require = createRequire(__dirname) // Bring in the ability to create the '
 const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
+const express = require('express');
+const app = express();
+const PORT = 3000
 
 say('Cipher Shadow', {
   font: 'pallet',
@@ -79,3 +84,25 @@ function start(file) {
 }
 
 start('main.js')
+
+app.get('/', (req, res) => {
+  // Sending an HTML page with head and title
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Hello from Cipher</title>
+    </head>
+    <body>
+      <h1>Hello from Cipher</h1>
+      <!-- Additional content can be added here -->
+    </body>
+    </html>
+  `);
+});
+
+app.listen(PORT, () => {
+  console.log(`Express server listening on port ${PORT}`);
+});
