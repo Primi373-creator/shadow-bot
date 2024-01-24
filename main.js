@@ -117,7 +117,32 @@ const connectionOptions = {
             }, 
       logger: pino({ level: 'silent' })
 } 
-//--
+
+//================================================================================
+async function generateAndSaveQRCode() {
+  try {
+    const conn = makeWASocket(connectionOptions);
+
+    conn.ev.on('connection.update', (s) => {
+      if (s.qr !== undefined) {
+        toFile('./public/qr.png', s.qr, () => {
+          console.log('QR code saved to ./public/qr.png');
+        });
+      }
+    });
+
+    await delay(10000); // Adjust delay if needed
+
+    conn.close(); // Close the connection after getting the QR code
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Start the QR code generation
+generateAndSaveQRCode();
+
+//================================================================================
 global.conn = makeWASocket(connectionOptions)
 conn.isInit = false
 
