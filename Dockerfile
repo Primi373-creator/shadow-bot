@@ -8,7 +8,7 @@ RUN apt-get update && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g forever && npm install qrcode-terminal
+RUN yarn global add forever qrcode-terminal 
 
 COPY . .
 
