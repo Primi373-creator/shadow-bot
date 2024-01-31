@@ -1,6 +1,6 @@
 { 
     "name": "shadow-bot",
-    "version": "3.0.0",
+    "version": "0.0.1",
     "description": "Customizable WhatsApp Bot",
     "main": "index.js",
     "type": "module",
@@ -20,8 +20,8 @@
         "whatsapp",
         "js-whatsapp",
         "whatsapp",
-        "dylux-bot",
-        "dylux-bot-md",
+        "shadow-bot",
+        "shadow-bot-md",
         "multi-device",
         "MD",
         "baileys-md"
