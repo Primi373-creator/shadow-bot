@@ -28,7 +28,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-  🚀 * _Konichiwa_ *%name*!👋🏻 shadow's Command Center is ready for action! Check out these cool commands:* 🚀
+  🚀 *Konichiwa *%name*!👋🏻 shadow's Command Center is ready for action! Check out these cool commands:* 🚀
 
 ┏━━⟪ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 ⟫━⦿
 ┃ ✗  🧿 Level : *%level* 
