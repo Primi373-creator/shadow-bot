@@ -31,7 +31,7 @@ global.dygp = 'https://chat.whatsapp.com/BESBo5xjvIZE4YVvth6Yzr'
 global.fgsc = 'https://github.com/Cipher0071/SHADOW-MD' 
 global.fgyt = 'https://youtube.com/'
 global.fgpyp = 'https://paypal.me/'
-global.fglog = 'https://i.imgur.com/Owmb93c.png' 
+global.fglog = 'https://i.pinimg.com/originals/63/a4/38/63a4386fd7b681ff490ac43e316e895b.jpg' 
 
 global.wait = '⌛'
 global.rwait = '⌛'
