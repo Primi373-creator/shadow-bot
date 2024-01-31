@@ -16,8 +16,8 @@ m.reply(`≡ *PREGUNTAS*
   else throw json
 }
 
-handler.help = ['pregunta']
+handler.help = ['preg']
 handler.tags = ['fun']
-handler.command = ['pregunta', 'preg'] 
+handler.command = ['ask', 'preg'] 
 
 export default handler
