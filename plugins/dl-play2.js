@@ -40,7 +40,7 @@ if (size.includes('GB')) return m.reply(` ≡  *YTDL*\n\n✘ *⚖️Size* : ${si
 `.trim(), m, false, { mimetype: isVideo ? '' : 'audio/mpeg', asDocument: chat.useDocument })
 		m.react(done) 
     } catch {
-		m.reply(`Error: intenta de nuevo`)
+		m.reply(`Error: Try again`)
     }
 
 }
