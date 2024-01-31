@@ -60,7 +60,7 @@ ${usedPrefix}help
       throw `✳️ Sorry, the bot  joined group`
       }
 }
-handler.help = ['join <chat.whatsapp.com> <dias>']
+handler.help = ['join <chat.w...p.com> <dias>']
 handler.tags = ['owner']
 handler.command = ['join', 'invite'] 
 
