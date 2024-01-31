@@ -5,47 +5,50 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
-   'main': 'ABOUT',
-  'game': 'GAMES',
-  'econ': 'LEVEL&ECON',
-  'rg': 'REGISTER',
+  'main': 'ACERCA DE',
+  'game': 'JUEGOS',
+  'econ': 'NIVEL & ECONOMIA',
+  'rg': 'REGISTRO',
   'sticker': 'STICKER',
-  'img': 'IMAGE',
+  'img': 'IMAGEN',
   'maker': 'MAKER',
   'prem': 'PREMIUM',
-  'group': 'GROUP',
-  'nable': 'EN/DIS OPT', 
+  'group': 'GRUPO',
+  'nable': 'EN/DISABLE OPCIONES', 
   'nime': 'ANIME',
-  'rnime': 'ANIME REACT.',
-  'dl': 'DOWNLOADS',
+  'rnime': 'ANIME REACCION',
+  'dl': 'DESCARGAS',
   'tools': 'TOOLS',
   'fun': 'FUN',
   'cmd': 'DATABASE',
   'nsfw': 'NSFW +18', 
   'ansfw': 'NSFW ANIME',
   'owner': 'OWNER', 
-  'advanced': 'ADVANCED',
+  'advanced': 'AVANZADO',
 }
 const defaultMenu = {
   before: `
-  🚀 *Konichiwa *%name*!👋🏻 shadow's Command Center is ready for action! Check out these cool commands:* 🚀
-
-┏━━⟪ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 ⟫━⦿
-┃ ✗  👑  Owner : ${owbot}
-┃ ✗  🧿 Level : *%level* 
-┃ ✗  👥 Users  : %totalreg
-┃ ✗  📈 Uptime : %muptime
-┗━━━━━━━━━━━━━━━⦿
-
+◈ ━━━━━ *DyLux  ┃ ᴮᴼᵀ* ━━━━━ ◈
+ 
+👋🏻 _Hola_ *%name*
+🧿 Nivel : *%level* 
+👥 Usuarios : %totalreg
+📈 Tiempo activo : %muptime
+─────────────
+▢ Crea tu propio bot 
+• https://youtu.be/xFqjKN1Qt80
+▢ Descarga *FGWhatsApp*
+• https://fgmods.xyz
+─────────────
 %readmore
-🌟 = Premium
-💎 = Diamonds
+Ⓟ = Premium
+ⓓ = Diamantes
 -----  -----  -----  -----  -----
-  🌟 *MENU LIST* 🌟
+  ≡ *LISTA DE MENUS*
 `.trimStart(),
-  header: '┏━━⟪ *%category* ⟫━⦿',
-  body: '┃ ✗ %cmd %isdiamond %isPremium',
-  footer: '┗━━━━━━━━━━━━━━━⦿\n',
+  header: '┌─⊷ *%category*',
+  body: '▢ %cmd %isdiamond %isPremium',
+  footer: '└───────────\n',
   after: `
 `,
 }
@@ -118,8 +121,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%isdiamond/g, menu.diamond ? '💎' : '')
-                .replace(/%isPremium/g, menu.premium ? '🌟' : '')
+                .replace(/%isdiamond/g, menu.diamond ? '(ⓓ)' : '')
+                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
                 .trim()
             }).join('\n')
           }),
@@ -146,20 +149,25 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-let pp = './src/shadow.jpg'
+    let pp = './src/fg_logo.jpg'
      
     conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
-     
+    /*conn.sendButton(m.chat, text.trim(), '▢ DyLux  ┃ ᴮᴼᵀ\n▢ Sígueme en Instagram\nhttps://www.instagram.com/fg98_ff', pp, [
+      ['ꨄ︎ Apoyar', `${_p}donate`],
+      ['⏍ Info', `${_p}botinfo`],
+      ['⌬ Grupos', `${_p}gpdylux`]
+    ],m, rpl)*/
+  
     m.react('📚') 
     
   } catch (e) {
-    conn.reply(m.chat, '❎ Sorry, there is a problem with the menu', m)
+    conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
     throw e
   }
 }
 handler.help = ['help']
 handler.tags = ['main']
-handler.command = ['menu', 'help', 'm'] 
+handler.command = ['menu', 'help', 'menú'] 
 handler.register = false
 
 handler.exp = 3
