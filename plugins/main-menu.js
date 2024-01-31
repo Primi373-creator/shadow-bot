@@ -28,21 +28,23 @@ let tags = {
 }
 const defaultMenu = {
   before: `
- 
-👋🏻 _Konichiwa_ *%name*
-🧿 Level : *%level* 
-👥 users : %totalreg
-📈 Uptime : %muptime
+  🚀 * _Konichiwa_ *%name*!👋🏻 shadow's Command Center is ready for action! Check out these cool commands:* 🚀
+
+┏━━⟪ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 ⟫━⦿
+┃✩│  🧿 Level : *%level* 
+┃✩│  👥 users : %totalreg
+┃✩│  📈 Uptime : %muptime
+┗━━━━━━━━━━━━━━━⦿
 
 %readmore
-Ⓟ = Premium
-ⓓ = Diamonds
+🌟 = Premium
+💎 = Diamonds
 -----  -----  -----  -----  -----
-  ≡ *MENU LIST*
+  🌟 *MENU LIST* 🌟
 `.trimStart(),
-  header: '╭━〘 *%category*〙──⊷',
-  body: '┃ ✘ %cmd %isdiamond %isPremium',
-  footer: '╰━━━━━━━━━━━━━━⊷\n',
+  header: '╭═══〘 *%category* 〙═══⊷❍',
+  body: '┃✩│ %cmd %isdiamond %isPremium',
+  footer: '╰═════════════════⊷\n',
   after: `
 `,
 }
@@ -115,8 +117,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%isdiamond/g, menu.diamond ? '(ⓓ)' : '')
-                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
+                .replace(/%isdiamond/g, menu.diamond ? '💎' : '')
+                .replace(/%isPremium/g, menu.premium ? '🌟' : '')
                 .trim()
             }).join('\n')
           }),
@@ -150,13 +152,13 @@ let pp = './src/shadow.jpg'
     m.react('📚') 
     
   } catch (e) {
-    conn.reply(m.chat, '❎ Sorry, the menu has an error', m)
+    conn.reply(m.chat, '❎ Sorry, there is a problem with the menu', m)
     throw e
   }
 }
 handler.help = ['help']
 handler.tags = ['main']
-handler.command = ['menu', 'help', 'menú'] 
+handler.command = ['menu', 'help', 'm'] 
 handler.register = false
 
 handler.exp = 3
