@@ -9,7 +9,7 @@ const sections = [
 	{title: "🔮 | Welcome", rowId: `${usedPrefix + command} welcome`},
 	{title: "🌎 | Public", rowId: `${usedPrefix + command} public`},
 	{title: "🔞 | Nsfw", rowId: `${usedPrefix + command} nsfw`},
-	{title: "🧬 | OnlyLatinos", rowId: `${usedPrefix + command} onlylatinos`},
+	{title: "🧬 | Onlynig", rowId: `${usedPrefix + command} onlynig`},
 	{title: "🔗 | Antilink", rowId: `${usedPrefix + command} antilink`},
         {title: "🚫 | Antidelete", rowId: `${usedPrefix + command} antidelete`},
 	{title: "⏏️ | Autolevelup", rowId: `${usedPrefix + command} autolevelup`},
@@ -106,19 +106,19 @@ const listMessage = {
       chat.antiLink = isEnable
       break
       
-      case 'sololatinos':
-      case 'sololatino':
-      case 'onlylatinos':
-      case 'onlylat':
-      case 'onlylatan':
-      case 'sololatan':
+      case 'solonig':
+      case 'solonigerians':
+      case 'onlynigerians':
+      case 'onlynig':
+      case 'onlynigs':
+      case 'solonig':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
           global.dfail('admin', m, conn)
           throw false
         }
       }
-      chat.onlyLatinos = isEnable
+      chat.onlynig = isEnable
       break
       
       case 'nsfw':
@@ -188,7 +188,7 @@ const listMessage = {
 ✘ detect 
 ✘ document
 ✘ nsfw
-✘ onlylatinos
+✘ onlynig
 └───────────── 
 ┌─⊷ *USERS*
 ✘ autolevelup
