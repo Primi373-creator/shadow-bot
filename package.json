@@ -1,5 +1,5 @@
 { 
-    "name": "dylux-bot",
+    "name": "shadow-bot",
     "version": "3.0.0",
     "description": "Customizable WhatsApp Bot",
     "main": "index.js",
@@ -26,20 +26,20 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/FG98F/dylux-fg",
+    "homepage": "https://github.com/Cipher0071/shadow-bot",
     "author": {
-        "name": "FG98"
+        "name": "Cipher"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/FG98F/dylux-bot.git"
+        "url": "git+https://github.com/Cipher0071/shadow-bot.git"
     },
     "bugs": {
-        "url": "https://github.com/FG98F/dylux-bot/issues"
+        "url": "https://github.com/Cipher0071/shadow-bot/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@whiskeysockets/baileys": "^6.4.1",
+        "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.2.3",
         "awesome-phonenumber": "^3.4.0",
@@ -48,6 +48,7 @@
         "cfonts": "^3.1.1",
         "chalk": "^5.1.0",
         "cheerio": "^1.0.0-rc.12",
+        "chess.js": "*",
         "colors": "1.4.0",
         "express": "^4.18.1",
         "file-type": "^18.0.0",
@@ -72,6 +73,7 @@
         "g-i-s": "^2.1.6",
         "socket.io": "^4.5.2",
         "syntax-error": "^1.4.0",
+        "similarity": "^1.2.1",
         "terminal-image": "^2.0.0",
         "url-regex-safe": "^3.0.0",
         "emoji-api": "^2.0.1",
