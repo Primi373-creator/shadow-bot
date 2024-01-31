@@ -43,6 +43,8 @@
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.2.3",
         "awesome-phonenumber": "^3.4.0",
+        "@shineiichijo/marika": "^2.0.6",
+        "@vitalets/google-translate-api": "^9.2.0",
         "axios": "^1.1.2",
         "form-data": "^4.0.0",
         "cfonts": "^3.1.1",
