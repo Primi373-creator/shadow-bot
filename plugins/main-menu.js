@@ -7,16 +7,16 @@ import { xpRange } from '../lib/levelling.js'
 let tags = {
    'main': 'ABOUT',
   'game': 'GAMES',
-  'econ': 'LEVEL & ECONOMY',
+  'econ': 'LEVEL&ECON',
   'rg': 'REGISTER',
   'sticker': 'STICKER',
   'img': 'IMAGE',
   'maker': 'MAKER',
   'prem': 'PREMIUM',
   'group': 'GROUP',
-  'nable': 'EN/DISABLE OPTIONS', 
+  'nable': 'EN/DIS OPT', 
   'nime': 'ANIME',
-  'rnime': 'ANIME REACTION',
+  'rnime': 'ANIME REACT.',
   'dl': 'DOWNLOADS',
   'tools': 'TOOLS',
   'fun': 'FUN',
@@ -31,9 +31,9 @@ const defaultMenu = {
   🚀 * _Konichiwa_ *%name*!👋🏻 shadow's Command Center is ready for action! Check out these cool commands:* 🚀
 
 ┏━━⟪ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 ⟫━⦿
-┃✩│  🧿 Level : *%level* 
-┃✩│  👥 users : %totalreg
-┃✩│  📈 Uptime : %muptime
+┃ ✗  🧿 Level : *%level* 
+┃ ✗  👥 users : %totalreg
+┃ ✗  📈 Uptime : %muptime
 ┗━━━━━━━━━━━━━━━⦿
 
 %readmore
@@ -42,9 +42,9 @@ const defaultMenu = {
 -----  -----  -----  -----  -----
   🌟 *MENU LIST* 🌟
 `.trimStart(),
-  header: '╭═══〘 *%category* 〙═══⊷❍',
-  body: '┃✩│ %cmd %isdiamond %isPremium',
-  footer: '╰═════════════════⊷\n',
+  header: '┏━━⟪ *%category* ⟫━⦿',
+  body: '┃ ✗ %cmd %isdiamond %isPremium',
+  footer: '┗━━━━━━━━━━━━━━━⦿\n',
   after: `
 `,
 }
