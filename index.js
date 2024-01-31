@@ -20,8 +20,6 @@ const require = createRequire(__dirname);
 const { name, author } = require(join(__dirname, './package.json'));
 
 const rl = createInterface(process.stdin, process.stdout);
-const app = express();
-const PORT = 3000;
 const { say } = cfonts;
 
 say('Cipher Shadow', {
@@ -87,19 +85,3 @@ function start(file) {
 }
 
 start('main.js')
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Create a route to handle root requests
-app.get('/', (req, res) => {
-  // Send the HTML page with the QR code image
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// Your existing code...
-// ...
-
-// Start the Express app on the specified port
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-});
