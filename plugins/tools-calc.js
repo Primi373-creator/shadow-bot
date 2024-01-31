@@ -30,7 +30,7 @@ let handler = async (m, { conn, text }) => {
 throw 'Incorrect format, only 0-9 and symbols -, +, *, /, ×, ÷, π, e, (, ) are allowed'
   }
 }
-handler.help = ['cal <ecuacion>']
+handler.help = ['cal <equation>']
 handler.tags = ['tools']
 handler.command = ['cal', 'calc', 'calculator'] 
 handler.exp = 5
