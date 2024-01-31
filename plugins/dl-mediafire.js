@@ -48,7 +48,7 @@ await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
 if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
     m.react(done)
 } catch {
-    m.reply(`Error: intenta con otro link`)
+    m.reply(`Error: Try a different link`)
 }
 
   }
