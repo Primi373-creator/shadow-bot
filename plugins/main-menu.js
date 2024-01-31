@@ -31,8 +31,9 @@ const defaultMenu = {
   🚀 *Konichiwa *%name*!👋🏻 shadow's Command Center is ready for action! Check out these cool commands:* 🚀
 
 ┏━━⟪ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 ⟫━⦿
+┃ ✗  👑  Owner : ${owbot}
 ┃ ✗  🧿 Level : *%level* 
-┃ ✗  👥 users : %totalreg
+┃ ✗  👥 Users  : %totalreg
 ┃ ✗  📈 Uptime : %muptime
 ┗━━━━━━━━━━━━━━━⦿
 
