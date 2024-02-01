@@ -170,7 +170,7 @@ function pickRandom(arr) {
 }
      
      
-let pp = './src/${pickRandom(imageNames)}'
+let pp = `./src/${pickRandom(imageNames)}`;
      
     conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
      
