@@ -89,5 +89,5 @@ function start(file) {
 start('main.js')
 
 
-app.use("/", express.static(join(__dirname, "view")));
+app.use("/", express.static(join(__dirname, "views")));
 app.listen(PORT);
