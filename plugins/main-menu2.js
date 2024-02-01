@@ -32,6 +32,7 @@ let rtotalreg = Object.values(global.db.data.users).filter(user => user.register
 let more = String.fromCharCode(8206)
 let readMore = more.repeat(850) 
 let greeting = ucapan()
+let name = await conn.getName(m.sender)
 
 
 let m2 = `
@@ -39,7 +40,7 @@ let m2 = `
 
 ┏━💼 _User Info:_ 💼━┓
 ┃ 👾  *User Tag:* ${taguser} 
-┃ 🎩  *Name:* ${name} 
+┃ 🎩  *Name:* %name 
 ┃ 💎  *Diamonds:* ${diamond} 
 ┃ 🏆  *Rank:* ${role}
 ┃ 🎮  *XP:* ${exp} 
@@ -101,7 +102,7 @@ function clockString(ms) {
     function ucapan() {
       const time = moment.tz('Africa/Lagos').format('HH')
       let res = ""
-      if (time >= 4) {
+      if (time >= 0) {
         res = "Ohayou gozaimasu 🌅🌄"
       }
       if (time >= 10) {
