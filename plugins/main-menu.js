@@ -147,7 +147,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-     
+  function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())]
+}   
      
 let pp = `./src/${pickRandom(["Cid Kagenou", "ᴄɪᴅ ᴋᴀɢᴇɴᴏᴜ◾","g","shadow","dg","KAGENOU", "download (1)"])}.jpg`
      
