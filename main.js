@@ -148,8 +148,8 @@ async function clearTmp() {
 }
 setInterval(async () => {
 	var a = await clearTmp()
-	console.log(chalk.cyan(`✅  Auto clear  | The tmp folder has been cleaned`))
-}, 180000) //3 muntos
+	console.log(chalk.cyan(`✅  Auto clear  | The tmp folder has been cleared`))
+}, 180000)
 
 async function connectionUpdate(update) {
   const {connection, lastDisconnect, isNewLogin} = update;
