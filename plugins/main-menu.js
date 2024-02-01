@@ -26,6 +26,26 @@ let tags = {
   'owner': 'OWNER', 
   'advanced': 'ADVANCED',
 }
+
+const imageNames = [
+  'Cid Kagenou.jpg',
+  'ᴄɪᴅ ᴋᴀɢᴇɴᴏᴜ◾.jpg',
+  'Cid.jpg',
+  'dg.jpg',
+  'download (1).jpg',
+  'download (2).jpg',
+  'download (3).jpg',
+  'e.jpg',
+  'g.jpg',
+  'gh.jpg',
+  'h.jpg',
+  'KAGENOU.jpg',
+  'r.jpg',
+  'Shadow.jpg'
+  'shadow.jpg' 
+];
+
+
 const defaultMenu = {
   before: `
   🚀 *Konichiwa %name!👋🏻 shadow's Command Center is ready for action! Check out these cool commands:* 🚀
@@ -144,8 +164,13 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    
-let pp = './src/shadow.jpg'
+
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+     
+     
+let pp = './src/${pickRandom(imageNames)}'
      
     conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
      
