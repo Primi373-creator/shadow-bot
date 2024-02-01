@@ -35,7 +35,7 @@ let greeting = ucapan()
 
 
 let m2 = `
-🚀 *_${greeting} ${name} senpai!!,Buckle up  We're going on an adventure!_* 🚀
+🚀 *_${greeting} %name senpai!!,Buckle up  We're going on an adventure!_* 🚀
 
 ┏━💼 _User Info:_ 💼━┓
 ┃ 👾  *User Tag:* ${taguser} 
@@ -100,7 +100,7 @@ function clockString(ms) {
     
     function ucapan() {
       const time = moment.tz('Africa/Lagos').format('HH')
-      let res = "happy early in the day☀️"
+      let res = ""
       if (time >= 4) {
         res = "Ohayou gozaimasu 🌅🌄"
       }
