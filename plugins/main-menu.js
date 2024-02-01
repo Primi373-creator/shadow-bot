@@ -150,8 +150,23 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }   
-     
-let pp = `./src/${pickRandom(["Cid Kagenou", "ᴄɪᴅ ᴋᴀɢᴇɴᴏᴜ◾","g","shadow","dg","KAGENOU", "download (1)"])}.jpg`
+let pp = `./src/${pickRandom([
+  "Cid Kagenou.jpg",
+  "ᴄɪᴅ ᴋᴀɢᴇɴᴏᴜ◾.jpg",
+  "Cid.jpg",
+  "dg.jpg",
+  "download (1).jpg",
+  "download (2).jpg",
+  "download (3).jpg",
+  "e.jpg",
+  "g.jpg",
+  "gh.jpg",
+  "h.jpg",
+  "KAGENOU.jpg",
+  "r.jpg",
+  "Shadow.jpg",
+  "shadow.jpg"
+])}`;
      
     conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
      
