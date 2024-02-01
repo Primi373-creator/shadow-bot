@@ -27,24 +27,6 @@ let tags = {
   'advanced': 'ADVANCED',
 }
 
-const imageNames = [
-  'Cid Kagenou.jpg',
-  'ᴄɪᴅ ᴋᴀɢᴇɴᴏᴜ◾.jpg',
-  'Cid.jpg',
-  'dg.jpg',
-  'download (1).jpg',
-  'download (2).jpg',
-  'download (3).jpg',
-  'e.jpg',
-  'g.jpg',
-  'gh.jpg',
-  'h.jpg',
-  'KAGENOU.jpg',
-  'r.jpg',
-  'Shadow.jpg'
-  'shadow.jpg' 
-];
-
 
 const defaultMenu = {
   before: `
@@ -165,12 +147,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-function pickRandom(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
      
      
-let pp = `./src/${pickRandom(imageNames)}`;
+let pp = `./src/${pickRandom(["Cid Kagenou", "ᴄɪᴅ ᴋᴀɢᴇɴᴏᴜ◾","g","shadow","dg","KAGENOU", "download (1)"])}.jpg`
      
     conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
      
