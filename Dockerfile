@@ -8,8 +8,7 @@ RUN apt-get update && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
 
-RUN yarn global add forever qrcode-terminal 
-
+RUN yarn global add forever 
 COPY . .
 
 EXPOSE 3000
