@@ -11,6 +11,6 @@ RUN apt-get update && \
 RUN yarn global add forever 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8000
 
 CMD ["forever", "index.js"]
