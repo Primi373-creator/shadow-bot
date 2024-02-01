@@ -36,11 +36,11 @@ let name = await conn.getName(m.sender)
 
 
 let m2 = `
-🚀 *_${greeting} %name senpai!!,Buckle up  We're going on an adventure!_* 🚀
+🚀 *_${greeting} ${name} senpai!!,Buckle up  We're going on an adventure!_* 🚀
 
 ┏━💼 _User Info:_ 💼━┓
 ┃ 👾  *User Tag:* ${taguser} 
-┃ 🎩  *Name:* %name 
+┃ 🎩  *Name:* ${name}
 ┃ 💎  *Diamonds:* ${diamond} 
 ┃ 🏆  *Rank:* ${role}
 ┃ 🎮  *XP:* ${exp} 
