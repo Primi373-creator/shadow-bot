@@ -135,7 +135,7 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
 /* Clear */
 //=========================================================
-const { promisify } = require('util');
+import { promisify } from 'util';
 
 
 const readdir = promisify(fs.readdir);
