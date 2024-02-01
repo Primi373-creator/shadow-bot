@@ -134,23 +134,53 @@ if (!opts['test']) {
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
 /* Clear */
-async function clearTmp() {
-  const tmp = [tmpdir(), join(__dirname, './tmp')]
-  const filename = []
-  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+//=========================================================
+const { promisify } = require('util');
 
-  //---
-  return filename.map(file => {
-    const stats = statSync(file)
-    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minuto
-    return false
-  })
+
+const readdir = promisify(fs.readdir);
+const stat = promisify(fs.stat);
+const unlink = promisify(fs.unlink);
+
+async function clearTmp() {
+    const tmp = [tmpdir(), join(__dirname, './tmp')];
+    const filenames = [];
+
+    for (const dirname of tmp) {
+        const files = await readdir(dirname);
+        filenames.push(...files.map(file => join(dirname, file)));
+    }
+
+    const results = await Promise.all(
+        filenames.map(async (file) => {
+            try {
+                const stats = await stat(file);
+
+                if (stats.isFile() && Date.now() - stats.mtimeMs >= 1000 * 60 * 3) {
+                    await unlink(file);
+                    return true; // File was deleted
+                }
+
+                return false;
+            } catch (error) {
+                console.error(`Error processing file ${file}: ${error.message}`);
+                return false;
+            }
+        })
+    );
+
+    return results;
 }
 setInterval(async () => {
-	var a = await clearTmp()
-	console.log(chalk.cyan(`✅  Auto clear  | The tmp folder has been cleared`))
-}, 180000)
+    try {
+        const results = await clearTmp();
+        console.log(chalk.cyan(`✅  Auto clear  | The tmp folder has been cleared`));
+    } catch (error) {
+        console.error(`Error during auto clear: ${error.message}`);
+    }
+}, 180000);
 
+//===============================================================================
 async function connectionUpdate(update) {
   const {connection, lastDisconnect, isNewLogin} = update;
   if (isNewLogin) conn.isInit = true;
