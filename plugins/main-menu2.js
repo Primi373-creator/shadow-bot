@@ -21,7 +21,7 @@ let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.m
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
   let user = global.db.data.users[who]
-let { name, exp, diamond, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who]
+let { exp, diamond, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who]
 let { min, xp, max } = xpRange(user.level, global.multiplier)
 let username = conn.getName(who)
 let math = max - xp
