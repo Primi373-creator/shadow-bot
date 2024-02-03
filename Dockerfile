@@ -7,8 +7,7 @@ RUN apt-get update && \
   webp && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
-
-RUN npm install -g forever 
+ 
 
 WORKDIR /app
 
