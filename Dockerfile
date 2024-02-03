@@ -1,1 +1,15 @@
-FROM node:lts-buster\n\nRUN apt-get update && apt-get install -y ffmpeg imagemagick webp && rm -rf /var/lib/apt/lists/*\n\nWORKDIR /app\n\nRUN npm install -g forever\n\nCOPY . .\n\nEXPOSE 8000\n\nCMD ["forever", "index.js"]
+FROM node:lts-buster
+
+RUN apt-get update \
+  && apt-get install -y ffmpeg imagemagick webp \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+RUN npm install -g forever
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["forever", "index.js"]
