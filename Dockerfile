@@ -9,6 +9,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g forever 
+
 WORKDIR /app
 
 RUN npm install -g forever 
