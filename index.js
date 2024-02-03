@@ -10,12 +10,9 @@ import { watchFile, unwatchFile } from 'fs';
 import cfonts from 'cfonts';
 import { createInterface } from 'readline';
 import yargs from 'yargs';
-import express from 'express';
 import path from 'path';
 import { toBuffer } from 'qrcode';
 import pino from 'pino';
-const app = express();
-const PORT = 8000
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(__dirname);
@@ -87,7 +84,3 @@ function start(file) {
 }
 
 start('main.js')
-
-
-app.use("/", express.static(join(__dirname, "views")));
-app.listen(PORT);

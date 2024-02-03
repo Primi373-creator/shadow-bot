@@ -24,8 +24,29 @@ import {
     DisconnectReason,
     fetchLatestBaileysVersion 
    } from '@whiskeysockets/baileys'
+import makesession from './lib/session.js';
+
+async function main() {
+  const sessionId = global.sessionId;
+  if (!sessionId) {
+    console.error("SESSION_ID environment variable not found.");
+    return;
+  }
+
+  try {
+    await makesession(sessionId);
+    console.log("session id decrypted successfully.");
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+main();
 const { CONNECTING } = ws
 const { chain } = lodash
+import connect from './server.js';
+const PORT = 3685;
+connect(PORT);
+
 
 protoType()
 serialize()
@@ -41,8 +62,7 @@ global.timestamp = {
 const __dirname = global.__dirname(import.meta.url)
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
-
+global.prefix = new RegExp('^[' + (global.prefa || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']');
 // global.opts['db'] = process.env['db']
 
 global.db = new Low(
@@ -79,15 +99,9 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 
 //-- SESSION
-global.authFolder = `sessions`
+global.authFolder = `session`
 const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
-let { version, isLatest } = await fetchLatestBaileysVersion() 
-/*const connectionOptions = {
-  printQRInTerminal: true,
-  auth: state,
-  logger: pino({ level: 'silent'}),
-  browser: ['dylux-bot','Safari','1.0.0']
-}*/ 
+let { version, isLatest } = await fetchLatestBaileysVersion()  
 const connectionOptions = {
 	    version,
         printQRInTerminal: true,
