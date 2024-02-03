@@ -44,7 +44,7 @@ main();
 const { CONNECTING } = ws
 const { chain } = lodash
 import connect from './server.js';
-const PORT = 3685;
+const PORT = 8000;
 connect(PORT);
 
 
