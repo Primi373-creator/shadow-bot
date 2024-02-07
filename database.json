@@ -1,7 +1,7 @@
 {
   "users": {
     "2349150690169@s.whatsapp.net": {
-      "exp": 317,
+      "exp": 354,
       "diamond": 10,
       "lastclaim": 0,
       "registered": false,
@@ -314,14 +314,30 @@
       "onlyLatinos": false,
       "nsfw": false,
       "expired": 0
+    },
+    "2347032757035@s.whatsapp.net": {
+      "isBanned": false,
+      "welcome": false,
+      "detect": false,
+      "sWelcome": "",
+      "sBye": "",
+      "sPromote": "",
+      "sDemote": "",
+      "delete": true,
+      "antiLink": false,
+      "viewonce": false,
+      "useDocument": true,
+      "onlyLatinos": false,
+      "nsfw": false,
+      "expired": 0
     }
   },
   "stats": {
     "main-menu.js": {
-      "total": 11,
-      "success": 11,
-      "last": 1706939983868,
-      "lastSuccess": 1706939983868
+      "total": 13,
+      "success": 13,
+      "last": 1707267441040,
+      "lastSuccess": 1707267441040
     },
     "group-bio.js": {
       "total": 2,
@@ -355,7 +371,7 @@
       "self": false,
       "autoread": false,
       "restrict": false,
-      "status": 1706939991775
+      "status": 1707267440881
     }
   }
 }

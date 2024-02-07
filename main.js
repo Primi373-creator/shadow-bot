@@ -24,23 +24,6 @@ import {
     DisconnectReason,
     fetchLatestBaileysVersion 
    } from '@whiskeysockets/baileys'
-import makesession from './lib/session.js';
-
-async function main() {
-  const sessionId = global.sessionId;
-  if (!sessionId) {
-    console.error("SESSION_ID environment variable not found.");
-    return;
-  }
-
-  try {
-    await makesession(sessionId);
-    console.log("session id decrypted successfully.");
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
-main();
 const { CONNECTING } = ws
 const { chain } = lodash
 import connect from './server.js';

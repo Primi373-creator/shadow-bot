@@ -7,7 +7,7 @@ global.owner = [
   ['2349067654525', 'Shadow', true]
 ] //Numeros de owner 
 
-global.sessionId = process.env.SESSION_ID || "ShadowBot~Q1loZVBna3g=";
+global.sessionId = process.env.SESSION_ID || "NVplMHg_SHADOW_4dlA",
 global.prefa = process.env.PREFIX || "#";
 global.mods = ['2349150690169'] 
 global.prems = ['2349150690169', '2349067654525']
