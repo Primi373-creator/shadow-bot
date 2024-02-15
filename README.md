@@ -1,38 +1,55 @@
  
 <p align="center"> 
-<img src="https://komarev.com/ghpvc/?username=FG98F&color=brightgreen" />
+<img src="https://komarev.com/ghpvc/?username=Cipher0071&color=brightgreen" />
 <p/>
 <p align="center">
-<a href="https://github.com/FG98F"><img title="Author" src="https://img.shields.io/badge/DyLux Bot-black?style=for-the-badge&logo=whatsApp"></a>
+<a href="https://github.com/Cipher0071"><img title="Author" src="https://img.shields.io/badge/Shadow Bot-black?style=for-the-badge&logo=whatsApp"></a>
 <p/>
 <p align="center">
-<a href="https://github.com/FG98F?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/FG98F?label=Followers&style=social"></a>
-<a href="https://github.com/FG98F/dylux-fg/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/FG98F/dylux-fg?&style=social"></a>
-<a href="https://github.com/FG98F/dylux-fg/network/members"><img title="Fork" src="https://img.shields.io/github/forks/FG98F/dylux-fg?style=social"></a>
-<a href="https://github.com/FG98F/dylux-fg/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/FG98F/dylux-fg?label=Watching&style=social"></a>
+<a href="https://github.com/Cipher0071?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/Cipher0071?label=Followers&style=social"></a>
+<a href="https://github.com/Cipher0071/shadow-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Cipher0071/shadow-bot?&style=social"></a>
+<a href="https://github.com/Cipher0071/shadow-bot/fork"><img title="Fork" src="https://img.shields.io/github/forks/Cipher0071/shadow-bot?style=social"></a>
+<a href="https://github.com/Cipher0071/shadow-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Cipher0071/shadow-bot?label=Watching&style=social"></a>
 </p>
 
 
 
-<h3 align="center">WHATSAPP BOT</h3>
+<h3 align="center">SHADOW-BOT</h3>
+
+### FORK THIS REPO
+
+- Must Fork This Repo Before Deployment !
+   <br> 
+<a href="https://github.com/Cipher0071/shadow-bot/fork"><img title="FORK" src="https://img.shields.io/badge/FORK REPO-h?color=black&style=for-the-badge&logo=stackshare"></a>
+
+
+### SCAN QR
+- Scan the QR and get the SESSION ID
+   <br>
+<a href='https://h-6g6q.onrender.com/' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ***
-### Información
-- Cambie número de dueño en [Config](https://github.com/FG98F/dylux-fg/blob/main/config.js#L6)
-- Puede cambiar a la última versión de baileys editando el package.json [esta sección](https://github.com/FG98F/dylux-fg/blob/main/package.json#L42)
+### Information
+- Change owner number in [Config](https://github.com/Cipher0071/shadow-bot/blob/main/config.js#L6)
+- You can downgrade to the latest version of baileys by editing the package.json [HERE](https://github.com/Cipher0071/shadow-bot/blob/main/package.json#L42)
 
-### FREE APIKEY
--  [click aquí](https://api.fgmods.xyz)
+### support group
+In case of support or any issues you can come here
 
-### Ejemplo 
-En caso de duda, antes de instalar dylux-bot, pruebe el bot aquí
-
-[![WhatsApp](https://img.shields.io/badge/DyLux-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://instabio.cc/fg98ff) 
+[![WhatsApp](https://img.shields.io/badge/Shadow-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FCfSLTySyqz1c7YPJD2KSm) 
 
 ***
 
-#### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FG98F/dylux-fg)
+#### DEPLOY TO HEROKU 
+
+1. If You don't have a account in Heroku. Create a account.
+    <br>
+<a href='https://heroku.com' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=heroku'/></a>
+2. Get [Mongo DB URI](https://www.mongodb.com/)
+   <br><br>
+3. Now Deploy
+    <br>
+<a href='https://heroku.com/deploy?template=https://github.com/Cipher0071/shadow-bot' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku'/></a>
 
 #### Heroku Buildpack
 | BuildPack | LINK |
@@ -40,7 +57,58 @@ En caso de duda, antes de instalar dylux-bot, pruebe el bot aquí
 | **FFMPEG** |[click](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
 | **IMAGEMAGICK** | [click](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
 
-### TERMUX
+#### DEPLOY TO REPLIT 
+
+1. If You don't have a account in Replit. Create a account.
+    <br>
+<a href='https://www.replit.com/' target="_blank"><img alt='Replit' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=replit'/></a>
+2. Get [Mongo DB URI](https://www.mongodb.com/)
+   <br><br>
+3. Now Deploy
+    <br>
+<a href='https://repl.it/github/Cipher0071/shadow-bot' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-IMPORT-black?style=for-the-badge&logo=replit'/></a>
+
+* Now fork it and enjoy 🗿🙌🏻
+<br>
+
+#### DEPLOY ON RAILWAY
+
+1. If You don't have a account in Railway. Create a account.
+    <br>
+<a href='https://railway.app' target="_blank"><img alt='Replit' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=railway'/></a>
+2. Get [Mongo DB URI](https://www.mongodb.com/)
+   <br><br>
+3. Now Deploy
+    <br>
+<a href='https://railway.app' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=railway'/></a>
+
+
+
+#### DEPLOY TO KOYEB 
+
+1. If You don't have a account in koyeb. Create a account.
+    <br>
+<a href='https://app.koyeb.com/auth/signup' target="_blank"><img alt='koyeb' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=koyeb'/></a>
+
+2. Get [Koyeb api key](https://app.koyeb.com/account/api)
+
+4. Now Deploy
+    <br>
+<a href='https://app.koyeb.com/apps/new/import-project' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=koyeb'/></a>
+
+#### DEPLOY ON MOGENIUS
+
+1. If You don't have a account in Replit. Create a account.
+    <br>
+<a href='https://mogenius.com' target="_blank"><img alt='mogenius' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=genius'/></a>
+2. Get [Mongo DB URI](https://www.mongodb.com/)
+   <br><br>
+3. Now Deploy
+    <br>
+<a href='https://mogenius.com' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=genius'/></a>
+
+
+### DEPLOY ON TERMUX
 1. 
 ```sh
 $ pkg upgrade -y && pkg update -y
@@ -48,27 +116,23 @@ $ pkg install git -y
 $ pkg install nodejs -y
 $ pkg install ffmpeg -y
 $ pkg install imagemagick -y
-$ git clone https://github.com/FG98F/dylux-fg
-$ cd dylux-fg
+$ git clone https://github.com/Cipher0071/shadow-bot
+$ cd shadow-bot
 $ npm i 
 $ npm start
 ```
-2. Esperar a que se inicie el bot...
-3. Escanea el código QR desde el segundo dispositivo. (ir a whatsapp > Dispositivos Vinculados > Vincular un dispositivo)
+2. Wait for the bot to start...
+3. Scan the QR code from the second device. (go to whatsapp > Linked Devices > Link a device)
 ---------
 
+#### Special Thanks To
 
-## BOXMINE
+<details close>
+<summary>Read More</summary>
 
-<a href="https://dash.boxmineworld.com/register?ref=Mb0BN5ny"><img src="https://k.top4top.io/p_2413wh2bh0.jpg" width="450" height="230" alt="BoxMine"/></a>
+<br>
 
-Instale el bot con un solo click! para que este activo 24/7
+* [`GURU`](https://github.com/Guru322)
+* [`FG98F`](https://github.com/FG98F)
 
----------
-* Create una cuenta  [`aquí`](https://dash.boxmineworld.com/register?ref=Mb0BN5ny)
-* Tutorial [`Click Aquí`](https://youtu.be/xFqjKN1Qt80)
-
-* Dashboard [`Click aquí`](https://dash.boxmineworld.com)
-* Panel [`Click aquí`](https://panel.boxmineworld.com/)
-
----------
+ </details>
