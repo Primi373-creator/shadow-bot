@@ -20,7 +20,7 @@
 
 - Must Fork This Repo Before Deployment !
    <br> 
-<a href="https://github.com/Cipher0071/shadow-bot/fork"><img title="FORK" src="https://img.shields.io/badge/FORK REPO-h?color=black&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/Cipher0071/shadow-bot/fork"><img title="FORK" src="https://img.shields.io/badge/FORK-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
 ### SCAN QR
