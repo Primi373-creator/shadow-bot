@@ -1,19 +1,7 @@
-FROM obasprom252/shadow-botv1:latest
-
-RUN apt-get update \
-  && apt-get install -y ffmpeg imagemagick webp \
-  && rm -rf /var/lib/apt/lists/*
-  
+FROM quay.io/obasprom252/shadow-botv1:latest
 RUN git clone https://github.com/Cipher0071/shadow-bot /root/Cipher
-
 WORKDIR /root/Cipher
-
-RUN npm install 
-
-RUN npm install -g forever
-
-COPY . .
-
+RUN npm install npm@latest
+RUN npm install
 EXPOSE 8000
-
-CMD ["forever", "index.js"]
+CMD ["npm", "start"]
