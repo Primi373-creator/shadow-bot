@@ -1,4 +1,9 @@
- 
+ <p align="center">  
+  <a href="https://github.com/Cipher0071">
+    <img alt="Cipher" height="300" src="src/shadow.jpg">
+    <h1 align="center">SHADOW-BOT</h1>
+  </a>
+</p>
 <p align="center"> 
 <img src="https://komarev.com/ghpvc/?username=Cipher0071&color=brightgreen" />
 <p/>
@@ -13,8 +18,6 @@
 </p>
 
 
-
-<h3 align="center">SHADOW-BOT</h3>
 
 ### FORK THIS REPO
 
