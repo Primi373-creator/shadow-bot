@@ -452,7 +452,7 @@ export async function handler(chatUpdate) {
         }
         if (process.env.AUTO_READ_MSG)
             await conn.readMessages([m.key])
-        if (process.env.AUTO_VIEW_STATUS && m.key.remoteJid === 'status@broadcast') 
+        if (process.env.AUTO_VIEW_STATUS && m.key && m.key.remoteJid === 'status@broadcast') 
             await conn.readMessages([m.key])
     }
 }
