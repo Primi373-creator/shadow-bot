@@ -106,7 +106,7 @@ handler.before = async (m, {
 };
 
 handler.help = ["song"];
-handler.tags = ["downloader"];
+handler.tags = ["downloads"];
 handler.command = /^(song)$/i;
 handler.limit = true;
 export default handler;
