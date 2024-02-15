@@ -503,7 +503,7 @@ export async function participantsUpdate({ id, participants, action }) {
                             }, 'apikey')
                         this.sendFile(id, action === 'add' ? wel : lea, 'pp.jpg', text, null, false, { mentions: [user] })
                         this.sendButton(id, text, fgig, action === 'add' ? wel : lea, [
-                             [(action == 'add' ? '⦙☰ MENU' : 'BYE'), (action == 'add' ? '/help' : 'khajs')], 
+                             [(action == 'add' ? '⦙☰ MENU' : 'BYE'), (action == 'add' ? '/help' : ' ')], 
                              [(action == 'add' ? '⏍ INFO' : 'ッ'), (action == 'add' ? '/info' : ' ')] ], null, {mentions: [user]})
                           
                     }
@@ -547,43 +547,51 @@ export async function groupsUpdate(groupsUpdate) {
 
 export async function deleteUpdate(message) {
     try {
-        const { fromMe, id, participant } = message
+        
+       
+      if (typeof process.env.antidelete === 'undefined' || process.env.antidelete.toLowerCase() === 'false') return;
+
+
+        const {
+            fromMe,
+            id,
+            participant
+        } = message
         if (fromMe)
             return
         let msg = this.serializeM(this.loadMessage(id))
         if (!msg)
             return
         let chat = global.db.data.chats[msg.chat] || {}
-        if (chat.delete)
-            return
-        await this.reply(msg.chat, `  
-┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
-▢ *Name :* @${participant.split`@`[0]} 
-└─────────────
-to deactivate, type 
-*/off antidelete*
-*.enable delete*
-`.trim(), msg, {
-            mentions: [participant]
-        })
-        this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
+       
+            await this.reply(conn.user.id, `
+            ≡ deleted a message 
+            ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
+            ▢ *Number :* @${participant.split`@`[0]} 
+            └─────────────
+            `.trim(), msg, {
+                        mentions: [participant]
+                    })
+        this.copyNForward(conn.user.id, msg, false).catch(e => console.log(e, msg))
     } catch (e) {
         console.error(e)
     }
 }
 
+
 global.dfail = (type, m, conn) => {
+    const userTag = `👋 konichiwa *@${m.sender.split("@")[0]}* senpai\n `
     let msg = {
-       rowner: '👑 This command can only be used by the *Bot Creator*',
-       owner: '🔱 This command can only be used by the *Bot Owner*',
-       mods: '🔰  This function is only for *Bot Moderators*',
-       premium: '💠 This command is only for *Premium* members\n\nType */premium* for more info',
-       group: '⚙️ This command can only be used in groups!',
-       private: '📮 This command can only be used in the *Bot\'s private chat*',
-       admin: '🛡️ This command is only for *Group Admins*',
-       botAdmin: '💥 To use this command, I must be an *Administrator*!',
-       unreg: '📇 Register to use this function. Write:\n\n*/reg name.age*\n\n📌Example: */reg dylux.16*',
-       restrict: '🔐 This feature is *disabled*'
+       rowner: ' ${userTag} 👑 This command can only be used by the *Bot Creator*',
+       owner: ' ${userTag} 🔱 This command can only be used by the *Bot Owner*',
+       mods: ' ${userTag} 🔰  This function is only for *Bot Moderators*',
+       premium: ' ${userTag} 💠 This command is only for *Premium* members\n',
+       group: ' ${userTag} ⚙️ This command can only be used in groups!',
+       private: ' ${userTag} 📮 This command can only be used in the *Bot\'s private chat*',
+       admin: ' ${userTag} 🛡️ This command is only for *Group Admins*',
+       botAdmin: ' ${userTag} 💥 To use this command, I must be an *Administrator*!',
+       unreg: ' ${userTag} 📇 Register to use this function.',
+       restrict: ' ${userTag} 🔐 This feature is *disabled*'
 
     }[type]
     if (msg) return m.reply(msg)
