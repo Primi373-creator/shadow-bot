@@ -16,7 +16,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
      case 'neon': 
      if (!text) throw tee
      let ne = global.API('fgmods', '/api/textpro/neon', { text }, 'apikey')
-     conn.sendMessage(m.chat, ne, { image: { url: 'logo.png' }}, `✅ Result`, m)
+     conn.sendFile(m.chat, ne, 'logo.png', `✅ Result`, m)
      m.react(done)
      break 
      case 'devil': 
