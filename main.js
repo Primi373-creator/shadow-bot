@@ -83,7 +83,7 @@ loadDatabase()
 
 //-- SESSION
 global.authFolder = `session`
-const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
+const { state, saveCreds } = await useMultiFileAuthState(__dirname + 'lib/auth_info_baileys/')
 let { version, isLatest } = await fetchLatestBaileysVersion()  
 const connectionOptions = {
 	    version,
@@ -127,9 +127,6 @@ if (!opts['test']) {
     } catch (e) { console.error(e) }
   }, 60 * 1000)
 }
-
-if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
-
 /* Clear */
 //=========================================================
 async function clearTmp() {
