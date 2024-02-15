@@ -48,9 +48,8 @@ In case of support or any issues you can come here
 1. If You don't have a account in Heroku. Create a account.
     <br>
 <a href='https://heroku.com' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=heroku'/></a>
-2. Get [Mongo DB URI](https://www.mongodb.com/)
-   <br><br>
-3. Now Deploy
+
+2. Now Deploy
     <br>
 <a href='https://heroku.com/deploy?template=https://github.com/Cipher0071/shadow-bot' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku'/></a>
 
@@ -65,23 +64,19 @@ In case of support or any issues you can come here
 1. If You don't have a account in Replit. Create a account.
     <br>
 <a href='https://www.replit.com/' target="_blank"><img alt='Replit' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=replit'/></a>
-2. Get [Mongo DB URI](https://www.mongodb.com/)
-   <br><br>
-3. Now Deploy
+
+2. Now Deploy
     <br>
 <a href='https://repl.it/github/Cipher0071/shadow-bot' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-IMPORT-black?style=for-the-badge&logo=replit'/></a>
 
-* Now fork it and enjoy 🗿🙌🏻
-<br>
 
 #### DEPLOY ON RAILWAY
 
 1. If You don't have a account in Railway. Create a account.
     <br>
 <a href='https://railway.app' target="_blank"><img alt='Replit' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=railway'/></a>
-2. Get [Mongo DB URI](https://www.mongodb.com/)
-   <br><br>
-3. Now Deploy
+
+2. Now Deploy
     <br>
 <a href='https://railway.app' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=railway'/></a>
 
@@ -95,7 +90,7 @@ In case of support or any issues you can come here
 
 2. Get [Koyeb api key](https://app.koyeb.com/account/api)
 
-4. Now Deploy
+3. Now Deploy
     <br>
 <a href='https://app.koyeb.com/apps/new/import-project' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=koyeb'/></a>
 
@@ -104,12 +99,20 @@ In case of support or any issues you can come here
 1. If You don't have a account in Replit. Create a account.
     <br>
 <a href='https://mogenius.com' target="_blank"><img alt='mogenius' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=genius'/></a>
-2. Get [Mongo DB URI](https://www.mongodb.com/)
-   <br><br>
-3. Now Deploy
+
+2. Now Deploy
     <br>
 <a href='https://mogenius.com' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=genius'/></a>
 
+#### DEPLOY ON BACK4APP
+
+1. If You don't have a account in Back4app. Create a account.
+    <br>
+<a href='https://www.back4app.com/signup?' target="_blank"><img alt='back4app' src='https://img.shields.io/badge/Back4App-000000?style=for-the-badge&logo=back4app&logoColor=white&labelColor=000000&color=000000'/></a>
+
+2. Now Deploy
+    <br>
+<a href='https://mogenius.com' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/Back4App-000000?style=for-the-badge&logo=back4app&logoColor=white&labelColor=000000&color=000000'/></a>
 
 ### DEPLOY ON TERMUX
 1. 
