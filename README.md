@@ -68,7 +68,7 @@ In case of support or any issues you can come here
 2. Now Deploy
     <br>
 <a href='https://repl.it/github/Cipher0071/shadow-bot' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-IMPORT-black?style=for-the-badge&logo=replit'/></a>
-
+3. Then head to uptime robot to create a monitor or any other cron job service provider to keep service alive
 
 #### DEPLOY ON RAILWAY
 
@@ -113,6 +113,7 @@ In case of support or any issues you can come here
 2. Now Deploy
     <br>
 <a href='https://mogenius.com' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/Back4App-000000?style=for-the-badge&logo=back4app&logoColor=white&labelColor=000000&color=000000'/></a>
+3. Then head to uptime robot to create a monitor or any other cron job service provider to keep service alive
 
 ### DEPLOY ON TERMUX
 1. 
