@@ -53,16 +53,12 @@ let infobt = `
 
 *≡ OWNER*
   *Cipher0071*
-✘ Instagram :
-  • Not on instagram!!
 ✘ WhatsApp :
-  • @#$9150690169 
+  • @2349150690169 
 ✘ GitHub :
   • https://github.com/Cipher0071
 ✘ Telegram : 
   • t.me/Cipher0071
-✘ YouTube : 
-  • Not on youtube!!
   
 
  *≡ S E R V E R*
