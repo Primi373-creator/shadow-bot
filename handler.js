@@ -446,12 +446,14 @@ export async function handler(chatUpdate) {
         }
 
         try {
-            if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this)
+            if (!opts["noprint"]) await (await import("./lib/print.js")).default(m, this)
         } catch (e) {
             console.log(m, m.quoted, e)
         }
-        if (opts['autoread'])
-            await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
+        if (process.env.AUTO_READ_MSG)
+            await conn.readMessages([m.key])
+        if (process.env.AUTO_VIEW_STATUS && m.key.remoteJid === 'status@broadcast') 
+            await conn.readMessages([m.key])
     }
 }
 
