@@ -26,7 +26,7 @@ import {
    } from '@whiskeysockets/baileys'
 const { CONNECTING } = ws
 const { chain } = lodash
-import connect from './server.js';
+import connect from './lib/server.js';
 const PORT = 8000;
 connect(PORT);
 
