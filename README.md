@@ -1,20 +1,19 @@
  <p align="center">  
-  <a href="https://github.com/Cipher0071">
-    <img alt="Cipher" height="300" src="src/shadow.jpg">
-    <h1 align="center">SHADOW-BOT</h1>
+  <a href="https://github.com/C-iph3r">
+    <h1 align="center">ALPHA-MD</h1>
   </a>
 </p>
 <p align="center"> 
-<img src="https://komarev.com/ghpvc/?username=Cipher0071&color=brightgreen" />
+<img src="https://komarev.com/ghpvc/?username=C-iph3r&color=brightgreen" />
 <p/>
 <p align="center">
-<a href="https://github.com/Cipher0071"><img title="Author" src="https://img.shields.io/badge/Shadow Bot-black?style=for-the-badge&logo=whatsApp"></a>
+<a href="https://github.com/C-iph3r"><img title="Author" src="https://img.shields.io/badge/Alpha-md-black?style=for-the-badge&logo=whatsApp"></a>
 <p/>
 <p align="center">
-<a href="https://github.com/Cipher0071?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/Cipher0071?label=Followers&style=social"></a>
-<a href="https://github.com/Cipher0071/shadow-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Cipher0071/shadow-bot?&style=social"></a>
-<a href="https://github.com/Cipher0071/shadow-bot/fork"><img title="Fork" src="https://img.shields.io/github/forks/Cipher0071/shadow-bot?style=social"></a>
-<a href="https://github.com/Cipher0071/shadow-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Cipher0071/shadow-bot?label=Watching&style=social"></a>
+<a href="https://github.com/C-iph3r?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/C-iph3r?label=Followers&style=social"></a>
+<a href="https://github.com/C-iph3r/alpha-md/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/C-iph3r/alpha-md?&style=social"></a>
+<a href="https://github.com/C-iph3r/alpha-md/fork"><img title="Fork" src="https://img.shields.io/github/forks/C-iph3r/alpha-md?style=social"></a>
+<a href="https://github.com/C-iph3r/alpha-md/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/C-iph3r/alpha-md?label=Watching&style=social"></a>
 </p>
 
 
@@ -23,23 +22,21 @@
 
 - Must Fork This Repo Before Deployment !
    <br> 
-<a href="https://github.com/Cipher0071/shadow-bot/fork"><img title="FORK" src="https://img.shields.io/badge/FORK-h?color=black&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/C-iph3r/alpha-md/fork"><img title="FORK" src="https://img.shields.io/badge/FORK-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
 ### SCAN QR
-- Scan the QR and get your creds.json then upload to lib/auth_info_baileys folder
+- Scan the QR to get your session id
    <br>
 <a href='https://h-6g6q.onrender.com/' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ***
 ### Information
-- Change owner number in [Config](https://github.com/Cipher0071/shadow-bot/blob/main/config.js#L6)
-- You can downgrade to the latest version of baileys by editing the package.json [HERE](https://github.com/Cipher0071/shadow-bot/blob/main/package.json#L42)
-
+- Change owner info in [Config](https://github.com/C-iph3r/alpha-md/blob/main/config.js)
 ### support group
 In case of support or any issues you can come here
 
-[![WhatsApp](https://img.shields.io/badge/Shadow-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FCfSLTySyqz1c7YPJD2KSm) 
+[![WhatsApp](https://img.shields.io/badge/alpha-md-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FCfSLTySyqz1c7YPJD2KSm) 
 
 ***
 
@@ -51,7 +48,7 @@ In case of support or any issues you can come here
 
 2. Now Deploy
     <br>
-<a href='https://heroku.com/deploy?template=https://github.com/Cipher0071/shadow-bot' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku'/></a>
+<a href='https://heroku.com/deploy?template=https://github.com/C-iph3r/alpha-md' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku'/></a>
 
 #### Heroku Buildpack
 | BuildPack | LINK |
@@ -67,7 +64,7 @@ In case of support or any issues you can come here
 
 2. Now Deploy
     <br>
-<a href='https://repl.it/github/Cipher0071/shadow-bot' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-IMPORT-black?style=for-the-badge&logo=replit'/></a>
+<a href='https://repl.it/github/C-iph3r/alpha-md' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-IMPORT-black?style=for-the-badge&logo=replit'/></a>
 3. Then head to uptime robot to create a monitor or any other cron job service provider to keep service alive
 
 #### DEPLOY ON RAILWAY
@@ -123,13 +120,11 @@ $ pkg install git -y
 $ pkg install nodejs -y
 $ pkg install ffmpeg -y
 $ pkg install imagemagick -y
-$ git clone https://github.com/Cipher0071/shadow-bot
-$ cd shadow-bot
+$ git clone https://github.com/C-iph3r/alpha-md
+$ cd alpha-md
 $ npm i 
 $ npm start
 ```
-2. Wait for the bot to start...
-3. Scan the QR code from the second device. (go to whatsapp > Linked Devices > Link a device)
 ---------
 
 <h2 align="center">  Reminder
@@ -157,7 +152,8 @@ $ npm start
 
 <br>
 
-* [`GURU`](https://github.com/Guru322)
-* [`FG98F`](https://github.com/FG98F)
+* [`Inrl`](https://github.com/I-NRL)
+* [`alip`](https://github.com/AlipBot)
+* [`Loki-Xer`](https://github.com/Loki-Xer)
 
  </details>
