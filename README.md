@@ -25,15 +25,15 @@
 <a href="https://github.com/C-iph3r/alpha-md/fork"><img title="FORK" src="https://img.shields.io/badge/FORK-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 
-### SCAN QR
-- Scan the QR to get your session id
+### GET SESSION ID
+- Click here to get your session id
    <br>
-<a href='https://h-6g6q.onrender.com/' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://qr-pair-zxyp.onrender.com/' target="_blank"><img alt='GET SESSION' src='https://img.shields.io/badge/GET SESSION-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ***
-### Information
+### INFORMATION
 - Change owner info in [Config](https://github.com/C-iph3r/alpha-md/blob/main/config.js)
-### support group
+### SUPPORT GROUP
 In case of support or any issues you can come here
 
 [![WhatsApp](https://img.shields.io/badge/alpha-md-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FCfSLTySyqz1c7YPJD2KSm) 
